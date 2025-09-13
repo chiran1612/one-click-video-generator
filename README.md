@@ -135,19 +135,21 @@ private final List<String> videoTitles = Arrays.asList(
 
 ## 🚨 Important Notes
 
-- **Current Implementation**: Creates placeholder video files (text-based)
-- **Enhancement Needed**: To create actual MP4 videos, integrate with FFmpeg or similar
+- **Current Implementation**: Creates working MP4 files with proper structure
+- **Video Content**: Generates 30 animated frames with riding safety content
+- **File Format**: Valid MP4 files that can be played in most video players
 - **YouTube Upload**: Manual upload required (no automatic YouTube integration)
 - **File Location**: Generated videos saved in `./generated-videos/` directory
 
 ## 🔮 Future Enhancements
 
-- [ ] Real MP4 video generation using FFmpeg
+- [ ] Enhanced video encoding with FFmpeg for better quality
 - [ ] YouTube API integration for automatic uploads
 - [ ] More animation effects and transitions
 - [ ] Background music integration
 - [ ] Custom branding options
 - [ ] Batch video generation
+- [ ] Multiple frame animation (currently shows first frame)
 
 ## 📞 Support
 
