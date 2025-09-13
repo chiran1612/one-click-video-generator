@@ -33,7 +33,7 @@ logging:
     name: logs/one-click-video.log
 
 # Application specific settings
-riding-roney:
+one-click-video:
   video:
     duration: 30  # seconds
     width: 1920

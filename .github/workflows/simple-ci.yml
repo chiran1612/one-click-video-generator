@@ -38,7 +38,7 @@ jobs:
       run: mvn package -DskipTests
       
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: one-click-video-generator-jar
         path: target/one-click-video-generator-*.jar
