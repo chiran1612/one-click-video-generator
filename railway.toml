@@ -1,0 +1,21 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "java -jar app.jar"
+healthcheckPath = "/health"
+healthcheckTimeout = 300
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+
+[env]
+SPRING_PROFILES_ACTIVE = "production"
+SERVER_PORT = "8080"
+
+[[services]]
+name = "one-click-video-generator"
+source = "."
+
+[services.variables]
+SPRING_PROFILES_ACTIVE = "production"

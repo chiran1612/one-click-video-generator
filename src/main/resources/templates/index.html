@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Click Video Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            text-align: center;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+        
+        .logo {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.3em;
+            margin-bottom: 40px;
+        }
+        
+        .create-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 25px 80px;
+            font-size: 1.8em;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .create-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.4);
+        }
+        
+        .create-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .instructions {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            color: #666;
+            text-align: left;
+        }
+        
+        .instructions h3 {
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .features {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .feature {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .feature h4 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🚴‍♂️</div>
+        <div class="title">One Click Video Generator</div>
+        <div class="subtitle">Riding Animation Videos for YouTube</div>
+        
+        <form action="/create" method="post">
+            <button type="submit" class="create-btn">
+                CREATE VIDEO
+            </button>
+        </form>
+        
+        <div class="instructions">
+            <h3>How it works:</h3>
+            <ol>
+                <li><strong>Click CREATE VIDEO</strong> - Generate a new riding animation</li>
+                <li><strong>Video downloads automatically</strong> - Get your MP4 file</li>
+                <li><strong>Upload to YouTube</strong> - Filename becomes your video title</li>
+                <li><strong>Done!</strong> 🎉 Your "Riding Roney" content is ready</li>
+            </ol>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h4>🎬 30-Second Videos</h4>
+                <p>Perfect length for YouTube Shorts and social media</p>
+            </div>
+            <div class="feature">
+                <h4>🛡️ Safety Focused</h4>
+                <p>All content promotes bike safety and proper gear</p>
+            </div>
+            <div class="feature">
+                <h4>🎯 Kid-Friendly</h4>
+                <p>Educational and entertaining content for young riders</p>
+            </div>
+            <div class="feature">
+                <h4>⚡ Instant Generation</h4>
+                <p>Create multiple videos daily with one click</p>
+            </div>
+        </div>
+        
+        <div class="status" id="statusDiv">
+            <div id="statusMessage"></div>
+        </div>
+    </div>
+
+    <script>
+        // Handle form submission with feedback
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const button = document.querySelector('.create-btn');
+            const statusDiv = document.getElementById('statusDiv');
+            const statusMessage = document.getElementById('statusMessage');
+            
+            // Show loading state
+            button.textContent = 'GENERATING...';
+            button.disabled = true;
+            
+            // Show status
+            statusDiv.className = 'status success';
+            statusDiv.style.display = 'block';
+            statusMessage.textContent = 'Creating your riding video... Please wait!';
+        });
+        
+        // Check for URL parameters to show success/error messages
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            document.getElementById('statusDiv').className = 'status success';
+            document.getElementById('statusDiv').style.display = 'block';
+            document.getElementById('statusMessage').textContent = 'Video created successfully! Check your downloads.';
+        } else if (urlParams.get('error') === 'true') {
+            document.getElementById('statusDiv').className = 'status error';
+            document.getElementById('statusDiv').style.display = 'block';
+            document.getElementById('statusMessage').textContent = 'Error creating video. Please try again.';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: one-click-video-generator
+  
+  # Thymeleaf configuration
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML
+
+# File upload settings
+spring.servlet.multipart:
+  max-file-size: 100MB
+  max-request-size: 100MB
+
+# Logging configuration
+logging:
+  level:
+    com.oneclickvideo: DEBUG
+    org.springframework.web: INFO
+    org.springframework.boot: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/one-click-video.log
+
+# Application specific settings
+riding-roney:
+  video:
+    duration: 30  # seconds
+    width: 1920
+    height: 1080
+    output-dir: ./generated-videos/
+  content:
+    safety-focused: true
+    kid-friendly: true
+    channel-name: "Riding Roney"
