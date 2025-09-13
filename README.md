@@ -1,4 +1,4 @@
-# 🚴‍♂️ Riding Roney Video Generator
+# 🚴‍♂️ One Click Video Generator
 
 A simple Spring Boot application that generates riding-themed animation videos with one click. Perfect for creating content for your "Riding Roney" YouTube channel.
 
@@ -21,7 +21,7 @@ A simple Spring Boot application that generates riding-themed animation videos w
 
 1. **Navigate to the project directory:**
    ```bash
-   cd C:\Users\Avita\Documents\riding-roney-generator
+   cd C:\Users\Avita\Documents\one-click-video-generator
    ```
 
 2. **Run the application:**
@@ -46,9 +46,9 @@ A simple Spring Boot application that generates riding-themed animation videos w
 ## 📁 Project Structure
 
 ```
-riding-roney-generator/
-├── src/main/java/com/ridingroney/
-│   ├── RidingRoneyApplication.java      # Main application class
+one-click-video-generator/
+├── src/main/java/com/oneclickvideo/
+│   ├── OneClickVideoApplication.java    # Main application class
 │   ├── controller/
 │   │   └── VideoController.java         # Web controller
 │   └── service/
@@ -99,7 +99,7 @@ mvn test
 ### Creating JAR File
 ```bash
 mvn clean package
-java -jar target/riding-roney-generator-1.0.0.jar
+java -jar target/one-click-video-generator-1.0.0.jar
 ```
 
 ## 📝 Daily Workflow
