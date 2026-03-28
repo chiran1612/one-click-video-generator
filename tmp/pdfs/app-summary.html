@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Click Video Generator - Repo Summary</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 0.42in;
+    }
+
+    :root {
+      --ink: #172033;
+      --muted: #52607a;
+      --accent: #1d6fd6;
+      --accent-soft: #eaf3ff;
+      --line: #d9e3f1;
+      --panel: #f6f9fc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .page {
+      width: 100%;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, #f4f8ff 0%, #ffffff 68%);
+      border-radius: 14px;
+      padding: 14px 16px 12px;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 22px;
+      line-height: 1.05;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 11px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.03fr 0.97fr;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 11px 12px 10px;
+      break-inside: avoid;
+    }
+
+    .section.fill {
+      background: var(--panel);
+    }
+
+    h2 {
+      margin: 0 0 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0;
+      font-size: 10.2px;
+      line-height: 1.42;
+    }
+
+    ul, ol {
+      margin: 6px 0 0 16px;
+      padding: 0;
+    }
+
+    li {
+      margin: 0 0 4px;
+      font-size: 10px;
+      line-height: 1.32;
+    }
+
+    .arch {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px 10px;
+      margin-top: 6px;
+    }
+
+    .arch-block {
+      background: var(--accent-soft);
+      border-radius: 10px;
+      padding: 7px 8px;
+      border: 1px solid #d7e7ff;
+    }
+
+    .arch-block strong {
+      display: block;
+      font-size: 9.8px;
+      margin-bottom: 2px;
+    }
+
+    .arch-block span {
+      font-size: 9.4px;
+      line-height: 1.28;
+      color: #31435f;
+    }
+
+    .footer {
+      margin-top: 10px;
+      padding: 9px 12px;
+      border-radius: 11px;
+      border: 1px solid var(--line);
+      background: #fff;
+      font-size: 9.2px;
+      color: var(--muted);
+    }
+
+    .mono {
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: 9.5px;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">Repo Summary</div>
+      <h1>One Click Video Generator</h1>
+      <p>
+        A Spring Boot web app that serves a single-page interface for creating riding-themed video files with one click.
+        Repo evidence shows it generates 30 image frames in Java, attempts FFmpeg-based MP4 encoding, and downloads the result from the browser.
+      </p>
+    </section>
+
+    <section class="grid">
+      <div class="section fill">
+        <h2>Who It's For</h2>
+        <p>
+          Primary persona: a content creator for the "Riding Roney" channel who wants quick, kid-friendly, safety-focused riding videos without a multi-step editing workflow.
+        </p>
+      </div>
+      <div class="section">
+        <h2>How To Run</h2>
+        <ol>
+          <li>Install Java 17+ and Maven 3.6+.</li>
+          <li>From the repo root, run <span class="mono">mvn spring-boot:run</span>.</li>
+          <li>Open <span class="mono">http://localhost:8080</span>.</li>
+          <li>Click <span class="mono">CREATE VIDEO</span> to trigger download.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="section">
+        <h2>What It Does</h2>
+        <ul>
+          <li>Serves a single Thymeleaf landing page with a prominent create button.</li>
+          <li>Generates a random riding title and story from in-code preset lists.</li>
+          <li>Creates 30 frames at 1920x1080 using Java2D text and gradient graphics.</li>
+          <li>Writes frame PNGs to a per-video frames directory.</li>
+          <li>Attempts FFmpeg encoding to produce an MP4 download.</li>
+          <li>Falls back to writing a basic MP4 structure if FFmpeg fails or is missing.</li>
+          <li>Stores output under <span class="mono">./generated-videos/</span> and exposes a <span class="mono">/health</span> endpoint.</li>
+        </ul>
+      </div>
+      <div class="section fill">
+        <h2>Architecture Overview</h2>
+        <div class="arch">
+          <div class="arch-block">
+            <strong>UI</strong>
+            <span><span class="mono">templates/index.html</span> renders the page and submits a POST to <span class="mono">/create</span>.</span>
+          </div>
+          <div class="arch-block">
+            <strong>Web Layer</strong>
+            <span><span class="mono">VideoController</span> serves <span class="mono">/</span>, handles <span class="mono">/create</span>, and streams the generated file as a download.</span>
+          </div>
+          <div class="arch-block">
+            <strong>Generation Service</strong>
+            <span><span class="mono">VideoService</span> picks random content, builds frames, saves PNGs, and manages output folders.</span>
+          </div>
+          <div class="arch-block">
+            <strong>Encoding Path</strong>
+            <span>The service launches an external <span class="mono">ffmpeg</span> process; if unavailable, it uses an in-process fallback writer.</span>
+          </div>
+          <div class="arch-block">
+            <strong>Config</strong>
+            <span><span class="mono">application.yml</span> sets port, Thymeleaf options, logging, and app video/content settings.</span>
+          </div>
+          <div class="arch-block">
+            <strong>Data / Integrations</strong>
+            <span>No database, queue, or external API integration found in repo. Content is static in code and files are written locally.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      Evidence basis: <span class="mono">README.md</span>, <span class="mono">pom.xml</span>, <span class="mono">application.yml</span>,
+      <span class="mono">index.html</span>, <span class="mono">VideoController.java</span>, and <span class="mono">VideoService.java</span>.
+      Items not evidenced by code were omitted; if a key detail had been missing, it would be labeled "Not found in repo."
+    </section>
+  </main>
+</body>
+</html>

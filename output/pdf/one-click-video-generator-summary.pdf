@@ -1,0 +1,537 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 7634 >>
+stream
+1 w
+0.84 0.89 0.96 RG
+0.97 0.98 1.00 rg
+34.00 699.89 527.28 108.00 re B
+BT
+/F2 9 Tf
+0.11 0.44 0.84 rg
+1 0 0 1 50.00 789.89 Tm
+(REPO SUMMARY) Tj
+ET
+BT
+/F2 22 Tf
+0.09 0.13 0.20 rg
+1 0 0 1 50.00 765.89 Tm
+(One Click Video Generator) Tj
+ET
+BT
+/F1 10.6 Tf
+0.25 0.33 0.46 rg
+1 0 0 1 50.00 745.89 Tm
+(A Spring Boot web app that serves a single-page interface for creating riding-themed video files) Tj
+ET
+BT
+/F1 10.6 Tf
+0.25 0.33 0.46 rg
+1 0 0 1 50.00 732.89 Tm
+(with one click. Repo evidence shows it generates 30 image frames in Java, attempts FFmpeg-based) Tj
+ET
+BT
+/F1 10.6 Tf
+0.25 0.33 0.46 rg
+1 0 0 1 50.00 719.89 Tm
+(MP4 encoding, and downloads the result from the browser.) Tj
+ET
+1 w
+0.84 0.89 0.96 RG
+0.96 0.98 0.99 rg
+34.00 599.89 273.10 88.00 re B
+BT
+/F2 10 Tf
+0.11 0.44 0.84 rg
+1 0 0 1 46.00 671.89 Tm
+(WHO IT'S FOR) Tj
+ET
+BT
+/F1 9.8 Tf
+0.25 0.33 0.46 rg
+1 0 0 1 46.00 653.89 Tm
+(Primary persona: a content creator for the "Riding) Tj
+ET
+BT
+/F1 9.8 Tf
+0.25 0.33 0.46 rg
+1 0 0 1 46.00 641.89 Tm
+(Roney" channel who wants quick, kid-friendly,) Tj
+ET
+BT
+/F1 9.8 Tf
+0.25 0.33 0.46 rg
+1 0 0 1 46.00 629.89 Tm
+(safety-focused riding videos without a multi-step) Tj
+ET
+BT
+/F1 9.8 Tf
+0.25 0.33 0.46 rg
+1 0 0 1 46.00 617.89 Tm
+(editing workflow.) Tj
+ET
+1 w
+0.84 0.89 0.96 RG
+319.10 599.89 242.18 88.00 re S
+BT
+/F2 10 Tf
+0.11 0.44 0.84 rg
+1 0 0 1 331.10 671.89 Tm
+(HOW TO RUN) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 331.10 653.89 Tm
+(1.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 343.10 653.89 Tm
+(Install Java 17+ and Maven 3.6+.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 331.10 641.69 Tm
+(2.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 343.10 641.69 Tm
+(From the repo root, run mvn) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 343.10 630.49 Tm
+(spring-boot:run.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 331.10 618.29 Tm
+(3.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 343.10 618.29 Tm
+(Open http://localhost:8080.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 331.10 606.09 Tm
+(4.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 343.10 606.09 Tm
+(Click CREATE VIDEO to trigger) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 343.10 594.89 Tm
+(download.) Tj
+ET
+1 w
+0.84 0.89 0.96 RG
+34.00 349.89 273.10 238.00 re S
+BT
+/F2 10 Tf
+0.11 0.44 0.84 rg
+1 0 0 1 46.00 571.89 Tm
+(WHAT IT DOES) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 46.00 553.89 Tm
+(-) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 553.89 Tm
+(Serves a single Thymeleaf landing page with a) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 542.69 Tm
+(prominent create button.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 46.00 530.49 Tm
+(-) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 530.49 Tm
+(Generates a random riding title and story from) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 519.29 Tm
+(in-code preset lists.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 46.00 507.09 Tm
+(-) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 507.09 Tm
+(Creates 30 frames at 1920x1080 using Java2D text) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 495.89 Tm
+(and gradient graphics.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 46.00 483.69 Tm
+(-) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 483.69 Tm
+(Writes frame PNGs to a per-video frames) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 472.49 Tm
+(directory.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 46.00 460.29 Tm
+(-) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 460.29 Tm
+(Attempts FFmpeg encoding to produce an MP4) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 449.09 Tm
+(download.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 46.00 436.89 Tm
+(-) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 436.89 Tm
+(Falls back to writing a basic MP4 structure if) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 425.69 Tm
+(FFmpeg fails or is missing.) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 46.00 413.49 Tm
+(-) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 413.49 Tm
+(Stores output under ./generated-videos/ and) Tj
+ET
+BT
+/F1 9.6 Tf
+0.11 0.17 0.26 rg
+1 0 0 1 56.00 402.29 Tm
+(exposes a /health endpoint.) Tj
+ET
+1 w
+0.84 0.89 0.96 RG
+0.96 0.98 0.99 rg
+319.10 349.89 242.18 238.00 re B
+BT
+/F2 10 Tf
+0.11 0.44 0.84 rg
+1 0 0 1 331.10 571.89 Tm
+(ARCHITECTURE OVERVIEW) Tj
+ET
+1 w
+0.84 0.91 1.00 RG
+0.92 0.96 1.00 rg
+331.10 497.89 107.09 58.00 re B
+BT
+/F2 9.2 Tf
+0.12 0.21 0.37 rg
+1 0 0 1 339.10 541.89 Tm
+(UI) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 339.10 528.89 Tm
+(templates/index.html) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 339.10 518.89 Tm
+(renders the page and) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 339.10 508.89 Tm
+(submits POST /create.) Tj
+ET
+1 w
+0.84 0.91 1.00 RG
+0.92 0.96 1.00 rg
+446.19 497.89 107.09 58.00 re B
+BT
+/F2 9.2 Tf
+0.12 0.21 0.37 rg
+1 0 0 1 454.19 541.89 Tm
+(Web layer) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 528.89 Tm
+(VideoController serves) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 518.89 Tm
+(/, handles /create, and) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 508.89 Tm
+(streams the generated) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 498.89 Tm
+(file.) Tj
+ET
+1 w
+0.84 0.91 1.00 RG
+0.92 0.96 1.00 rg
+331.10 431.89 107.09 58.00 re B
+BT
+/F2 9.2 Tf
+0.12 0.21 0.37 rg
+1 0 0 1 339.10 475.89 Tm
+(Generation service) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 339.10 462.89 Tm
+(VideoService picks) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 339.10 452.89 Tm
+(random content, builds) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 339.10 442.89 Tm
+(frames, saves PNGs, and) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 339.10 432.89 Tm
+(manages output folders.) Tj
+ET
+1 w
+0.84 0.91 1.00 RG
+0.92 0.96 1.00 rg
+446.19 431.89 107.09 58.00 re B
+BT
+/F2 9.2 Tf
+0.12 0.21 0.37 rg
+1 0 0 1 454.19 475.89 Tm
+(Encoding path) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 462.89 Tm
+(The service launches an) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 452.89 Tm
+(external ffmpeg process;) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 442.89 Tm
+(if unavailable, it uses) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 432.89 Tm
+(an in-process fallback) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 422.89 Tm
+(writer.) Tj
+ET
+1 w
+0.84 0.91 1.00 RG
+0.92 0.96 1.00 rg
+331.10 365.89 107.09 58.00 re B
+BT
+/F2 9.2 Tf
+0.12 0.21 0.37 rg
+1 0 0 1 339.10 409.89 Tm
+(Config) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 339.10 396.89 Tm
+(application.yml sets) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 339.10 386.89 Tm
+(port, Thymeleaf options,) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 339.10 376.89 Tm
+(logging, and app) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 339.10 366.89 Tm
+(video/content settings.) Tj
+ET
+1 w
+0.84 0.91 1.00 RG
+0.92 0.96 1.00 rg
+446.19 365.89 107.09 58.00 re B
+BT
+/F2 9.2 Tf
+0.12 0.21 0.37 rg
+1 0 0 1 454.19 409.89 Tm
+(Data / integrations) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 396.89 Tm
+(Persistent store: Not) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 386.89 Tm
+(found in repo. External) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 376.89 Tm
+(API integration: Not) Tj
+ET
+BT
+/F1 8.5 Tf
+0.19 0.26 0.37 rg
+1 0 0 1 454.19 366.89 Tm
+(found in repo.) Tj
+ET
+1 w
+0.84 0.89 0.96 RG
+34.00 285.89 527.28 44.00 re S
+BT
+/F1 8.8 Tf
+0.30 0.37 0.48 rg
+1 0 0 1 46.00 311.89 Tm
+(Evidence basis: README.md, pom.xml, application.yml, index.html, VideoController.java, and VideoService.java.) Tj
+ET
+BT
+/F1 8.8 Tf
+0.30 0.37 0.48 rg
+1 0 0 1 46.00 301.39 Tm
+(Items not evidenced by code were omitted; missing details are labeled "Not found in repo.") Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 5 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Type /Pages /Count 1 /Kids [4 0 R] >>
+endobj
+6 0 obj
+<< /Type /Catalog /Pages 5 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000007846 00000 n 
+0000007988 00000 n 
+0000008045 00000 n 
+trailer
+<< /Size 7 /Root 6 0 R >>
+startxref
+8094
+%%EOF
