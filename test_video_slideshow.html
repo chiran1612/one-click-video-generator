@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Slideshow</title>
+    <style>
+        body { margin: 0; padding: 20px; background: #000; text-align: center; }
+        .frame { display: none; max-width: 100%; height: auto; }
+        .frame.active { display: block; }
+        .controls { margin: 20px; }
+        button { padding: 10px 20px; margin: 5px; font-size: 16px; }
+        .info { color: white; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1 style='color: white;'>Video Slideshow</h1>
+    <div class='info'>Generated 5 frames</div>
+    <div class='info'>Frame directory: C:\Users\Avita\Documents\one-click-video-generator\test_video_frames</div>
+    <img class='frame' id='frame0' src='frame_000.png' alt='Frame 1'>
+    <img class='frame' id='frame1' src='frame_001.png' alt='Frame 2'>
+    <img class='frame' id='frame2' src='frame_002.png' alt='Frame 3'>
+    <img class='frame' id='frame3' src='frame_003.png' alt='Frame 4'>
+    <img class='frame' id='frame4' src='frame_004.png' alt='Frame 5'>
+    <div class='controls'>
+        <button onclick='startSlideshow()'>Start Slideshow</button>
+        <button onclick='stopSlideshow()'>Stop Slideshow</button>
+        <button onclick='showFrame(0)'>Show Frame 1</button>
+        <button onclick='showFrame(1)'>Show Frame 2</button>
+        <button onclick='showFrame(2)'>Show Frame 3</button>
+        <button onclick='showFrame(3)'>Show Frame 4</button>
+        <button onclick='showFrame(4)'>Show Frame 5</button>
+    </div>
+    <script>
+        let currentFrame = 0;
+        let slideshowInterval;
+        const totalFrames = 5;
+        
+        function showFrame(frameIndex) {
+            // Hide all frames
+            for (let i = 0; i < totalFrames; i++) {
+                document.getElementById('frame' + i).classList.remove('active');
+            }
+            // Show selected frame
+            if (frameIndex < totalFrames) {
+                document.getElementById('frame' + frameIndex).classList.add('active');
+                currentFrame = frameIndex;
+            }
+        }
+        
+        function startSlideshow() {
+            stopSlideshow();
+            slideshowInterval = setInterval(() => {
+                showFrame(currentFrame);
+                currentFrame = (currentFrame + 1) % totalFrames;
+            }, 1000); // 1 second per frame
+        }
+        
+        function stopSlideshow() {
+            if (slideshowInterval) {
+                clearInterval(slideshowInterval);
+            }
+        }
+        
+        // Show first frame by default
+        showFrame(0);
+    </script>
+</body>
+</html>

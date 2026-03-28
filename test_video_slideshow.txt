@@ -1,0 +1,14 @@
+=== VIDEO SLIDESHOW CONTENT ===
+Generated 5 frames
+Frame directory: C:\Users\Avita\Documents\one-click-video-generator\test_video_frames
+
+Frame 1: frame_000.png
+Frame 2: frame_001.png
+Frame 3: frame_002.png
+Frame 4: frame_003.png
+Frame 5: frame_004.png
+
+=== INSTRUCTIONS ===
+1. Open test_video_slideshow.html in your web browser to see the animation
+2. Or open the frame images in the C:\Users\Avita\Documents\one-click-video-generator\test_video_frames folder
+3. Each frame shows for 1 second in the video
