@@ -39,6 +39,8 @@ one-click-video:
     width: 1920
     height: 1080
     output-dir: ./generated-videos/
+    ffmpeg-command: ffmpeg
+    ffmpeg-timeout-seconds: 120
   content:
     safety-focused: true
     kid-friendly: true
